@@ -1,0 +1,8 @@
+.btn-primary {
+
+     background: var(--primary-dark);
+}
+
+.btn-primary:hover {
+     background: var(--primary);
+}
