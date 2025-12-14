@@ -11,6 +11,12 @@
 :root {
   /* Brand Colors */
   --primary: #BEF264;
+  --primary-gradient: linear-gradient(to right,
+      #00dade82 0%,
+      rgba(131, 25, 131, 0.39) 50%,
+      rgba(11, 10, 11, 0) 60%);
+
+
   /* primary blue */
   --primary-dark: #9cec12;
   --secondary: #B4B5B5;
@@ -51,12 +57,22 @@
 ======================== */
 body {
   font-family: "Inter", sans-serif;
-  background: var(--bg-light);
+  background: var(--bg-dark);
   color: var(--text-primary);
 }
 
 .primary-dark {
-  color: var(--primary-dark);
+  color: var(--bg-dark);
+}
+
+.primary-gradient {
+  background: #fc00ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00dbde, #0a000a);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: var(--primary-gradient);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .primary-dark:hover {
@@ -130,4 +146,31 @@ button {
 .btn-outline:hover {
   background: var(--primary);
   color: white;
+}
+
+/* ===== Custom Scrollbar ===== */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.45);
 }
