@@ -47,7 +47,7 @@ export default function ContributionHeatmap({
      });
 
      return (
-          <div className="rounded-2xl bg-neutral-900 p-6 text-white w-full overflow-x-auto">
+          <div className="rounded-2xl bg-light p-6 text-white w-full overflow-x-auto">
 
                {/* MONTH HEADER (FULL WIDTH, ALIGNED) */}
                <div
