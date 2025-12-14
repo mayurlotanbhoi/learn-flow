@@ -9,12 +9,7 @@ export default function Home() {
   return (
 
     <>
-
-
-
       <body className="container flex flex-col justify-between items-center min-w-screen antialiased  bg-white overflow-x-hidden" cz-shortcut-listen="true">
-
-
         <Modal
           open={open}
           setOpen={setOpen}
